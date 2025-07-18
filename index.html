@@ -43,16 +43,25 @@
   }
   .right {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     align-items: center;
   }
   .connect-link {
     color: #1e90ff;
     text-decoration: none;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
   }
   .connect-link:hover {
     text-decoration: underline;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
   }
 </style>
 </head>
@@ -68,9 +77,15 @@
   </div>
 
   <div class="right">
-    <a href="https://www.tiktok.com/@voltsdrops" class="connect-link" target="_blank" rel="noopener noreferrer">TikTok</a>
-    <a href="https://discord.gg/NeM76tGpEW" class="connect-link" target="_blank" rel="noopener noreferrer">Discord</a>
-    <a href="https://www.youtube.com/@VoltsDrops" class="connect-link" target="_blank" rel="noopener noreferrer">YouTube</a>
+    <a href="https://www.tiktok.com/@voltsdrops" class="connect-link" target="_blank" rel="noopener noreferrer">
+      <img src="tiktok-logo.png" alt="TikTok" class="icon" /> TikTok
+    </a>
+    <a href="https://discord.gg/NeM76tGpEW" class="connect-link" target="_blank" rel="noopener noreferrer">
+      <img src="discord-icon.png" alt="Discord" class="icon" /> Discord
+    </a>
+    <a href="https://www.youtube.com/@VoltsDrops" class="connect-link" target="_blank" rel="noopener noreferrer">
+      <img src="youtube-icon.png" alt="YouTube" class="icon" /> YouTube
+    </a>
   </div>
 </div>
 
