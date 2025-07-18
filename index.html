@@ -1,110 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>VoltsDrops</title>
-<style>
-  body {
-    margin: 0; 
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: white;
-  }
-  .banner-container {
-    position: relative;
-    width: 100%;
-    max-height: 250px;
-    overflow: hidden;
-  }
-  .banner-container img.banner {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-  }
-  .overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    max-width: 90%;
-  }
-  .logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 15px rgba(0,0,0,0.7);
-  }
-  .title-bio {
-    display: flex;
-    flex-direction: column;
-  }
-  .title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 0;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-  }
-  .bio {
-    margin-top: 6px;
-    font-size: 1.25rem;
-    opacity: 0.9;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  }
-  .right {
-    margin-left: auto;
-    display: flex;
-    gap: 25px;
-    align-items: center;
-  }
-  .connect-link {
-    color: #1e90ff;
-    text-decoration: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  }
-  .connect-link:hover {
-    text-decoration: underline;
-  }
-  .icon {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VoltsDrops</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+    .banner-container {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+    }
+    .banner-container img.banner {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      right: 30px;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(100% - 60px);
+    }
+    .left-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    }
+    .title-bio {
+      display: flex;
+      flex-direction: column;
+    }
+    .title {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    }
+    .bio {
+      margin-top: 6px;
+      font-size: 1.25rem;
+      opacity: 0.9;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+    .right {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+    .connect-link {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+    .connect-link:hover {
+      text-decoration: underline;
+    }
+    .icon {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+  </style>
 </head>
 <body>
 
-<div class="banner-container">
-  <img src="banner.jpg" alt="VoltsDrops Banner" class="banner" />
-  <div class="overlay-content">
-    <img src="voltslogo.png" alt="VoltsDrops Logo" class="logo" />
-    <div class="title-bio">
-      <h1 class="title">VoltsDrops</h1>
-      <p class="bio">Support me in the Item Shop — Creator Code: VoltsDrops</p>
-    </div>
-    <div class="right">
-      <a href="https://www.tiktok.com/@voltsdrops" class="connect-link" target="_blank" rel="noopener noreferrer">
-        <img src="tiktok-logo.png" alt="TikTok" class="icon" /> TikTok
-      </a>
-      <a href="https://discord.gg/NeM76tGpEW" class="connect-link" target="_blank" rel="noopener noreferrer">
-        <img src="discord-icon.png" alt="Discord" class="icon" /> Discord
-      </a>
-      <a href="https://www.youtube.com/@VoltsDrops" class="connect-link" target="_blank" rel="noopener noreferrer">
-        <img src="youtube-icon.png" alt="YouTube" class="icon" /> YouTube
-      </a>
+  <div class="banner-container">
+    <img src="banner.jpg" alt="VoltsDrops Banner" class="banner" />
+    <div class="overlay-content">
+      <div class="left-content">
+        <img src="voltslogo.png" alt="VoltsDrops Logo" class="logo" />
+        <div class="title-bio">
+          <h1 class="title">VoltsDrops</h1>
+          <p class="bio">Support me in the Item Shop — Creator Code: VoltsDrops</p>
+        </div>
+      </div>
+
+      <div class="right">
+        <a href="https://www.tiktok.com/@voltsdrops" class="connect-link" target="_blank" rel="noopener noreferrer">
+          <img src="tiktok-logo.png" alt="TikTok" class="icon" /> TikTok
+        </a>
+        <a href="https://discord.gg/NeM76tGpEW" class="connect-link" target="_blank" rel="noopener noreferrer">
+          <img src="discord-icon.png" alt="Discord" class="icon" /> Discord
+        </a>
+        <a href="https://www.youtube.com/@VoltsDrops" class="connect-link" target="_blank" rel="noopener noreferrer">
+          <img src="youtube-icon.png" alt="YouTube" class="icon" /> YouTube
+        </a>
+      </div>
     </div>
   </div>
-</div>
 
 </body>
 </html>
