@@ -10,19 +10,19 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: #fff;
-      text-align: left;
-      padding-left: 1rem;
+      padding: 1rem;
     }
     header {
-      padding: 2rem 1rem;
-      background: none;
-      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
     .logo-title {
       display: flex;
       align-items: center;
       gap: 1rem;
-      justify-content: flex-start;
+      min-width: 220px;
     }
     .logo-title img {
       height: 100px;
@@ -38,25 +38,43 @@
     header p {
       font-size: 1.2rem;
       color: #ffcc00;
-      margin-top: 0.5rem;
+      margin: 0;
+      margin-left: 1rem;
+      font-weight: bold;
     }
-    section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
+    main {
+      display: flex;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .videos {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      flex: 1;
     }
     iframe {
-      width: 90%;
-      max-width: 560px;
+      width: 100%;
       height: 315px;
       border: none;
       border-radius: 10px;
-      margin-bottom: 2rem;
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 2rem;
+      color: #fff;
+    }
+    .content h2 {
+      margin-top: 0;
+      color: #ffcc00;
     }
     .socials a {
       display: inline-block;
-      margin: 0.5rem;
+      margin: 0.5rem 0.5rem 0 0;
       padding: 0.75rem 1.5rem;
       background: #7289da;
       color: white;
@@ -76,32 +94,38 @@
       <img src="voltslogo.png" alt="VoltsDrops Logo" />
       <h1>VoltsDrops</h1>
     </div>
-    <p>Support me in the Item Shop — <strong>Creator Code: VoltsDrops</strong></p>
+    <p>Support me in the Item Shop — Creator Code: <strong>VoltsDrops</strong></p>
   </header>
 
-  <section>
-    <h2>🎮 Latest YouTube Video</h2>
-    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=VoltsDrops" allowfullscreen></iframe>
-  </section>
+  <main>
+    <div class="videos">
+      <section>
+        <h2>🎮 Latest YouTube Video</h2>
+        <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=VoltsDrops" allowfullscreen></iframe>
+      </section>
 
-  <section>
-    <h2>📱 TikTok Highlight</h2>
-    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@voltsdrops" data-unique-id="voltsdrops" style="max-width: 325px; margin: auto;">
-      <section>Loading TikTok...</section>
-    </blockquote>
-    <script async src="https://www.tiktok.com/embed.js"></script>
-  </section>
+      <section>
+        <h2>📱 TikTok Highlight</h2>
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@voltsdrops" data-unique-id="voltsdrops" style="max-width: 100%; margin: auto;">
+          <section>Loading TikTok...</section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+      </section>
+    </div>
 
-  <section>
-    <h2>About VoltsDrops</h2>
-    <p>I’m VoltsDrops — a Fortnite creator sharing cracked plays, wild wins, and highlight reels across TikTok and YouTube. Join the VoltSquad!</p>
-  </section>
+    <div class="content">
+      <section>
+        <h2>About VoltsDrops</h2>
+        <p>I’m VoltsDrops — a Fortnite creator sharing cracked plays, wild wins, and highlight reels across TikTok and YouTube. Join the VoltSquad!</p>
+      </section>
 
-  <section class="socials">
-    <h2>🌐 Connect</h2>
-    <a href="https://www.tiktok.com/@voltsdrops" target="_blank">TikTok</a>
-    <a href="https://www.youtube.com/@VoltsDrops" target="_blank">YouTube</a>
-    <a href="https://discord.gg/NeM76tGpEW" target="_blank">Discord</a>
-  </section>
+      <section class="socials">
+        <h2>🌐 Connect</h2>
+        <a href="https://www.tiktok.com/@voltsdrops" target="_blank">TikTok</a>
+        <a href="https://www.youtube.com/@VoltsDrops" target="_blank">YouTube</a>
+        <a href="https://discord.gg/NeM76tGpEW" target="_blank">Discord</a>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
