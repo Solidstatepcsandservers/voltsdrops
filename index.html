@@ -20,7 +20,7 @@
       background-image: url("banner.jpg");
       background-size: cover;
       background-position: center;
-      padding: 30px;
+      padding: 20px;
       padding-bottom: 1cm;
     }
 
@@ -28,21 +28,25 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       gap: 20px;
     }
 
     .left-content {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
+      flex: 1 1 300px;
+      min-width: 0;
     }
 
     .logo {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+      flex-shrink: 0;
     }
 
     .title-bio {
@@ -54,23 +58,26 @@
     }
 
     .title {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: bold;
       margin: 0;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     }
 
     .bio {
-      margin-top: 6px;
-      font-size: 1.25rem;
-      opacity: 0.9;
+      margin-top: 4px;
+      font-size: 1rem;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     }
 
     .right {
       display: flex;
-      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 15px;
       align-items: center;
+      flex: 1 1 300px;
+      min-width: 0;
     }
 
     .connect-link {
@@ -79,34 +86,70 @@
       font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 1.5rem;
+      gap: 8px;
+      font-size: 1rem;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px 10px;
+      border-radius: 8px;
     }
 
     .connect-link:hover {
-      text-decoration: underline;
+      background: rgba(0, 0, 0, 0.6);
     }
 
     .icon {
-      width: 36px;
-      height: 36px;
+      width: 22px;
+      height: 22px;
       object-fit: contain;
     }
 
     .funny-bio {
       background: rgba(0, 0, 0, 0.6);
-      margin: 0;
-      padding: 30px;
-      font-size: 1.3rem;
+      padding: 20px;
+      font-size: 1.1rem;
       text-align: center;
       line-height: 1.6;
       text-shadow: 1px 1px 4px black;
     }
 
     main {
-      padding: 50px;
-      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    @media (max-width: 600px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .bio {
+        font-size: 0.95rem;
+      }
+
+      .connect-link {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+      }
+
+      .icon {
+        width: 18px;
+        height: 18px;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
+      }
+
+      .funny-bio {
+        font-size: 1rem;
+        padding: 15px;
+      }
     }
   </style>
 </head>
@@ -118,15 +161,13 @@
         <img src="voltslogo.png" alt="VoltsDrops Logo" class="logo" />
         <div class="title-bio">
           <h1 class="title">VoltsDrops</h1>
-          <p class="bio">
-            Support me in the Item Shop — Creator Code: VoltsDrops
-          </p>
+          <p class="bio">Support me in the Item Shop — Creator Code: VoltsDrops</p>
         </div>
       </div>
 
       <div class="right">
         <a href="https://www.tiktok.com/@voltsdrops" class="connect-link" target="_blank" rel="noopener noreferrer">
-          <img src="tiktok-logo.png" alt="TikTok" class="icon" /> TikTok
+          <img src="tictok-logo.png" alt="TikTok" class="icon" /> TikTok
         </a>
         <a href="https://discord.gg/NeM76tGpEW" class="connect-link" target="_blank" rel="noopener noreferrer">
           <img src="discord-icon.png" alt="Discord" class="icon" /> Discord
@@ -139,10 +180,10 @@
   </div>
 
   <div class="funny-bio">
-    🎮 Plays Fortnite like it's a full-time job (but it's not).<br>
-    🧢 Owns more hats than skills.<br>
-    🧔 Bald, bearded, and built different (kinda).<br>
-    🔥 Mid? Maybe. Entertaining? Absolutely.
+    🎮 Plays Fortnite like it’s a full-time job (it’s not).<br />
+    🧢 Rocks hats like a fashion icon hiding secrets.<br />
+    🧔 Bald, bearded, and built mid. <br />
+    💯 Funny? Sometimes. Chill? Always.
   </div>
 
   <main>
