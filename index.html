@@ -8,7 +8,10 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: black;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: white;
     }
 
@@ -45,6 +48,9 @@
     .title-bio {
       display: flex;
       flex-direction: column;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px;
+      border-radius: 10px;
     }
 
     .title {
@@ -74,7 +80,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     }
 
@@ -83,16 +89,22 @@
     }
 
     .icon {
-      width: 28px;
-      height: 28px;
+      width: 36px;
+      height: 36px;
       object-fit: contain;
     }
 
+    .funny-bio {
+      background: rgba(0, 0, 0, 0.6);
+      margin: 0;
+      padding: 30px;
+      font-size: 1.3rem;
+      text-align: center;
+      line-height: 1.6;
+      text-shadow: 1px 1px 4px black;
+    }
+
     main {
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
       padding: 50px;
       min-height: 100vh;
     }
@@ -106,13 +118,15 @@
         <img src="voltslogo.png" alt="VoltsDrops Logo" class="logo" />
         <div class="title-bio">
           <h1 class="title">VoltsDrops</h1>
-          <p class="bio">Support me in the Item Shop — Creator Code: VoltsDrops</p>
+          <p class="bio">
+            Support me in the Item Shop — Creator Code: VoltsDrops
+          </p>
         </div>
       </div>
 
       <div class="right">
         <a href="https://www.tiktok.com/@voltsdrops" class="connect-link" target="_blank" rel="noopener noreferrer">
-          <img src="tiktok-logo.png" alt="TikTok" class="icon" /> TikTok
+          <img src="tictok-logo.png" alt="TikTok" class="icon" /> TikTok
         </a>
         <a href="https://discord.gg/NeM76tGpEW" class="connect-link" target="_blank" rel="noopener noreferrer">
           <img src="discord-icon.png" alt="Discord" class="icon" /> Discord
@@ -124,8 +138,14 @@
     </div>
   </div>
 
+  <div class="funny-bio">
+    🎮 Plays Fortnite like it's a full-time job (but it's not).<br>
+    🧢 Owns more hats than skills.<br>
+    🧔 Bald, bearded, and built different (kinda).<br>
+    🔥 Mid? Maybe. Entertaining? Absolutely.
+  </div>
+
   <main>
-    <!-- Add your page content here -->
     <h2>Welcome to VoltsDrops' official site!</h2>
     <p>More coming soon...</p>
   </main>
