@@ -65,38 +65,57 @@
     nav.socials a:hover {
       background: #5b6eae;
     }
+
     main {
-      max-width: 1300px;
+      max-width: 1400px;
       margin: 5rem auto 0;
       display: flex;
-      gap: 160px; /* wide gap */
+      gap: 160px;
       padding: 0 1rem;
-    }
-    .videos {
-      display: flex;
-      gap: 160px; /* wide gap */
-      width: 100%;
       justify-content: center;
     }
-    .videos section {
-      flex: 0 0 600px; /* fixed wide width */
+
+    .videos {
+      display: flex;
+      gap: 160px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
+
+    .videos section {
+      flex: 0 0 600px;
+    }
+
     iframe {
       width: 600px;
-      height: 338px; /* 16:9 aspect ratio */
+      height: 338px;
       border: none;
       border-radius: 10px;
     }
+
+    .tiktok-wrapper {
+      width: 600px;
+      height: 338px;
+      overflow: hidden;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .tiktok-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: scale(0.84);
+      transform-origin: top left;
+      border-radius: 10px;
+    }
+
     section h2 {
       color: #ffcc00;
       margin-top: 0;
       margin-bottom: 0.5rem;
-    }
-    blockquote.tiktok-embed {
-      max-width: 600px;
-      margin: auto;
-      border-radius: 10px;
-      overflow: hidden;
     }
   </style>
 </head>
@@ -131,13 +150,16 @@
 
       <section>
         <h2>📱 TikTok Highlight</h2>
-        <blockquote
-          class="tiktok-embed"
-          cite="https://www.tiktok.com/@voltsdrops"
-          data-unique-id="voltsdrops"
-        >
-          <section>Loading TikTok...</section>
-        </blockquote>
+        <div class="tiktok-wrapper">
+          <blockquote
+            class="tiktok-embed"
+            cite="https://www.tiktok.com/@voltsdrops"
+            data-unique-id="voltsdrops"
+            style="width: 600px; height: 338px;"
+          >
+            <section>Loading TikTok...</section>
+          </blockquote>
+        </div>
         <script async src="https://www.tiktok.com/embed.js"></script>
       </section>
     </div>
