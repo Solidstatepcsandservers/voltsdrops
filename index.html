@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VoltsDrops - Fortnite Creator</title>
   <style>
     body {
@@ -17,16 +17,22 @@
       background: url('https://cdn2.unrealengine.com/fortnite-ch5s3-keyart-logo-1920x1080-60f7b4b78a25.jpg') center/cover;
       background-blend-mode: overlay;
       background-color: rgba(0,0,0,0.6);
+      text-align: left;
+      max-width: 900px;
+      margin: 0 auto;
     }
     .logo-title {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 1rem;
     }
     .logo-title img {
-      height: 60px;
-      width: 60px;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffcc00;
     }
     header h1 {
       font-size: 3rem;
@@ -36,6 +42,7 @@
       font-size: 1.2rem;
       color: #ffcc00;
       margin-top: 0.5rem;
+      text-align: left;
     }
     section {
       padding: 2rem 1rem;
@@ -67,7 +74,7 @@
 <body>
   <header>
     <div class="logo-title">
-      <img src="voltslogo.png" alt="VoltsDrops Logo">
+      <img src="voltslogo.png" alt="VoltsDrops Logo" />
       <h1>VoltsDrops</h1>
     </div>
     <p>Support me in the Item Shop — <strong>Creator Code: VoltsDrops</strong></p>
@@ -99,3 +106,4 @@
   </section>
 </body>
 </html>
+
