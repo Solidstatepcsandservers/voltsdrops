@@ -66,23 +66,24 @@
       background: #5b6eae;
     }
     main {
-      max-width: 1000px;
+      max-width: 1300px;
       margin: 5rem auto 0;
       display: flex;
-      gap: 160px; /* doubled gap again */
+      gap: 160px; /* wide gap */
       padding: 0 1rem;
     }
     .videos {
       display: flex;
-      gap: 160px; /* doubled gap again */
+      gap: 160px; /* wide gap */
       width: 100%;
+      justify-content: center;
     }
     .videos section {
-      flex: 1;
+      flex: 0 0 600px; /* fixed wide width */
     }
     iframe {
-      width: 100%;
-      height: 450px; /* bigger videos */
+      width: 600px;
+      height: 338px; /* 16:9 aspect ratio */
       border: none;
       border-radius: 10px;
     }
@@ -92,8 +93,10 @@
       margin-bottom: 0.5rem;
     }
     blockquote.tiktok-embed {
-      max-width: 100%;
+      max-width: 600px;
       margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
     }
   </style>
 </head>
@@ -118,12 +121,21 @@
     <div class="videos">
       <section>
         <h2>🎮 Latest YouTube Video</h2>
-        <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=VoltsDrops" allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed?listType=user_uploads&list=VoltsDrops&index=0"
+          allowfullscreen
+          loading="lazy"
+          title="Latest YouTube Video"
+        ></iframe>
       </section>
 
       <section>
         <h2>📱 TikTok Highlight</h2>
-        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@voltsdrops" data-unique-id="voltsdrops">
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@voltsdrops"
+          data-unique-id="voltsdrops"
+        >
           <section>Loading TikTok...</section>
         </blockquote>
         <script async src="https://www.tiktok.com/embed.js"></script>
