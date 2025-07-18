@@ -14,11 +14,11 @@
     }
     header {
       display: flex;
-      justify-content: space-between; /* push left and right to edges */
+      justify-content: space-between; /* push groups to edges */
       align-items: center;
-      max-width: 1000px;
-      margin: 0 auto 1.5rem;
-      padding: 0 1rem;
+      padding: 0 2rem; /* left/right padding inside header */
+      width: 100vw; /* full viewport width */
+      box-sizing: border-box;
     }
     .logo-title {
       display: flex;
@@ -67,7 +67,7 @@
     }
     main {
       max-width: 1000px;
-      margin: 0 auto;
+      margin: 2rem auto 0;
       display: flex;
       gap: 1rem;
       padding: 0 1rem;
