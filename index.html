@@ -8,20 +8,17 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      background-color: black;
       color: white;
     }
 
     .header {
       position: relative;
-      background-image: url("banner.jpg");
+      background-image: url("banner.jpeg");
       background-size: cover;
       background-position: center;
       padding: 30px;
-      padding-bottom: 38px; /* 100px logo + ~1cm (~38px) */
+      padding-bottom: 138px;
     }
 
     .header-content {
@@ -90,6 +87,15 @@
       height: 28px;
       object-fit: contain;
     }
+
+    main {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 50px;
+      min-height: 100vh;
+    }
   </style>
 </head>
 <body>
@@ -106,7 +112,7 @@
 
       <div class="right">
         <a href="https://www.tiktok.com/@voltsdrops" class="connect-link" target="_blank" rel="noopener noreferrer">
-          <img src="tiktok-logo.png" alt="TikTok" class="icon" /> TikTok
+          <img src="tiktok-icon.png" alt="TikTok" class="icon" /> TikTok
         </a>
         <a href="https://discord.gg/NeM76tGpEW" class="connect-link" target="_blank" rel="noopener noreferrer">
           <img src="discord-icon.png" alt="Discord" class="icon" /> Discord
@@ -117,6 +123,12 @@
       </div>
     </div>
   </div>
+
+  <main>
+    <!-- Add your page content here -->
+    <h2>Welcome to VoltsDrops' official site!</h2>
+    <p>More coming soon...</p>
+  </main>
 
 </body>
 </html>
