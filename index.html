@@ -3,166 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VoltsDrops - Fortnite Creator</title>
+  <title>VoltsDrops Latest YouTube Video</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      padding: 1rem;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 2rem;
-      width: 100vw;
-      box-sizing: border-box;
-    }
-    .logo-title {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .logo-title img {
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #ffcc00;
-    }
-    .title-text {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #121212;
+      color: white;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-    }
-    .title-text h1 {
-      font-size: 3rem;
+      align-items: center;
+      min-height: 100vh;
       margin: 0;
-      color: white;
     }
-    .title-text p {
-      font-size: 1.2rem;
-      color: #ffcc00;
-      margin: 0.25rem 0 0 0;
-      font-weight: bold;
+    h1 {
+      margin-bottom: 20px;
     }
-    nav.socials {
-      display: flex;
-      gap: 0.75rem;
-      white-space: nowrap;
+    #video-container {
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
     }
-    nav.socials a {
-      padding: 0.75rem 1.5rem;
-      background: #7289da;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    nav.socials a:hover {
-      background: #5b6eae;
-    }
-
-    main {
-      max-width: 1400px;
-      margin: 5rem auto 0;
-      display: flex;
-      gap: 160px;
-      padding: 0 1rem;
-      justify-content: center;
-    }
-
-    .videos {
-      display: flex;
-      gap: 160px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .videos section {
-      flex: 0 0 600px;
-    }
-
     iframe {
-      width: 600px;
-      height: 338px;
+      width: 100%;
+      height: 340px;
       border: none;
       border-radius: 10px;
     }
-
-    .tiktok-wrapper {
-      width: 600px;
-      height: 338px;
-      overflow: hidden;
-      border-radius: 10px;
-      position: relative;
+    a {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: bold;
     }
-
-    .tiktok-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transform: scale(0.84);
-      transform-origin: top left;
-      border-radius: 10px;
-    }
-
-    section h2 {
-      color: #ffcc00;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo-title">
-      <img src="voltslogo.png" alt="VoltsDrops Logo" />
-      <div class="title-text">
-        <h1>VoltsDrops</h1>
-        <p>Support me in the Item Shop — Creator Code: <strong>VoltsDrops</strong></p>
-      </div>
-    </div>
+  <h1>VoltsDrops Latest YouTube Video</h1>
+  <div id="video-container">Loading latest video...</div>
 
-    <nav class="socials">
-      <a href="https://www.tiktok.com/@voltsdrops" target="_blank" rel="noopener">TikTok</a>
-      <a href="https://www.youtube.com/@VoltsDrops" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://discord.gg/NeM76tGpEW" target="_blank" rel="noopener">Discord</a>
-    </nav>
-  </header>
+  <script>
+    async function fetchLatestYouTubeVideo() {
+      const channelId = "UC9xD_Oa2V7a-0z9kx7-OWzA"; // VoltsDrops channel ID
+      const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
 
-  <main>
-    <div class="videos">
-      <section>
-        <h2>🎮 Latest YouTube Video</h2>
-        <iframe
-          src="https://www.youtube.com/embed?listType=user_uploads&list=VoltsDrops&index=0"
-          allowfullscreen
-          loading="lazy"
-          title="Latest YouTube Video"
-        ></iframe>
-      </section>
+      try {
+        const response = await fetch(rssUrl);
+        const text = await response.text();
 
-      <section>
-        <h2>📱 TikTok Highlight</h2>
-        <div class="tiktok-wrapper">
-          <blockquote
-            class="tiktok-embed"
-            cite="https://www.tiktok.com/@voltsdrops"
-            data-unique-id="voltsdrops"
-            style="width: 600px; height: 338px;"
-          >
-            <section>Loading TikTok...</section>
-          </blockquote>
-        </div>
-        <script async src="https://www.tiktok.com/embed.js"></script>
-      </section>
-    </div>
-  </main>
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(text, "application/xml");
+
+        const entry = xmlDoc.querySelector("entry");
+        if (!entry) {
+          document.getElementById("video-container").textContent = "No videos found";
+          return;
+        }
+
+        const videoUrl = entry.querySelector("link").getAttribute("href");
+        const title = entry.querySelector("title").textContent;
+
+        const videoId = videoUrl.split("v=")[1];
+        const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+
+        document.getElementById("video-container").innerHTML = `
+          <h2>${title}</h2>
+          <iframe src="${embedUrl}" allowfullscreen></iframe>
+          <p><a href="${videoUrl}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+        `;
+      } catch (err) {
+        document.getElementById("video-container").textContent = "Failed to load video";
+        console.error(err);
+      }
+    }
+
+    fetchLatestYouTubeVideo();
+  </script>
 </body>
 </html>
